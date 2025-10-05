@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رحلة النباتات البيئية</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="FL_RA_FUTURE-removebg-preview.png" alt="الشعار" class="logo rotating-logo" />
+    <h1>رحلة النباتات البيئية 🌿</h1>
+    <p class="description">
+          اكتشف النباتات التقليدية والمستقبلية لكل بيئة 
+وسجل رحلتك الزراعية مع جواز السفر النباتي.<br>
+      اختر منطقتك وابدأ الرحلة النباتية!
+<div class="purple-line"></div>
+    </p>
+  </header>
+
+  <main>
+    
+    <section id="start-section">
+      <button onclick="startApp()">ابدأ الآن</button>
+    </section>
+
+    
+    <section id="map-section" class="hidden">
+      <div class="map-container" id="map-box">
+        <img src="pass.png" alt="صورة على الخريطة" class="floating-img" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7533775.230046387!2d54.950168025565254!3d22.780177171516097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e379603b69a4d55%3A0x58627340ca1e7ccc!2z2KfZhNin2K3Ys9in2KE!5e0!3m2!1sar!2ssa!4v1759652020685!5m2!1sar!2ssa"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="region-buttons" id="region-buttons">
+        <button onclick="selectRegion('desert')">🏜️ المنطقة الصحراوية</button>
+        <button onclick="selectRegion('coastal')">🌊 المنطقة الساحلية</button>
+      </div>
+
+      <div class="plant-buttons hidden" id="plant-buttons">
+        <button onclick="showPlants('traditional')">🌾 النباتات التقليدية</button>
+        <button onclick="showPlants('future')">🌱 النباتات المستقبلية</button>
+      </div>
+    </section>
+
+    
+    <section id="plant-cards" class="hidden">
+      <h2>بطاقات النباتات</h2>
+      <div id="cards-container" class="card-grid"></div>
+      <button onclick="goBack()" class="back-button">🔙 رجوع</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
